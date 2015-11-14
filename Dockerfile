@@ -18,4 +18,4 @@ RUN cd /src; npm install
 EXPOSE 9005
 
 # CMD cd /src && node ./app.js
-CMD cd /src && gulp
+CMD cd /src && npm start
