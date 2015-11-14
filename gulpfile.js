@@ -22,7 +22,7 @@ var config = {
       		'node_modules/toastr/toastr.css'
     	],
 		dist: './dist',
-		mainJs: './src/main.js'
+		mainJs: './main.js'
 	}
 }
 
