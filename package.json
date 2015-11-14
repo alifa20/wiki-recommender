@@ -5,7 +5,8 @@
   "main": "index.js",
   "author": "Cory House",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "gulp"
   },
   "private": true,
   "license": "ISC",
