@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Cory House",
+  "scripts": {
+    "test": "mocha"
+  },
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^3.3.5",
     "browserify": "^10.2.4",
+    "chai": "^3.4.1",
     "flux": "^2.0.3",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
@@ -19,11 +20,16 @@
     "gulp-open": "^0.3.2",
     "jquery": "^2.1.4",
     "lodash": "^3.10.0",
+    "mocha": "^2.3.3",
     "object-assign": "^3.0.0",
     "react": "^0.13.3",
     "react-router": "^0.13.3",
     "reactify": "^1.1.1",
+    "supertest": "^1.1.0",
     "toastr": "^2.1.0",
     "vinyl-source-stream": "^1.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.3"
   }
 }
