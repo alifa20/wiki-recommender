@@ -2,8 +2,8 @@
 
 var React = require('react');
 var Router = require('react-router');
-var routes = require('./routes');
-var InitializeActions = require('./actions/initializeActions');
+var routes = require('./src/routes');
+var InitializeActions = require('./src/actions/initializeActions');
 
 InitializeActions.initApp();
 
