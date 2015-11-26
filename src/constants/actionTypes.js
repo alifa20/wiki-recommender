@@ -7,5 +7,8 @@ module.exports = keyMirror({
 	CREATE_AUTHOR: null,
 	UPDATE_AUTHOR: null,
 	DELETE_AUTHOR: null,
-	FETCH_WIKIS: null
+	FETCH_WIKIS: null,
+	ERROR_FETCH_WIKIS: null,
+	WIKI_LOADER_ON: null,
+	WIKI_LOADER_OFF: null
 });

@@ -13,14 +13,17 @@ var Home = React.createClass({
 	recommendWikis: function(event) {
 		event.preventDefault();
 		// debugger;
-		// AuthorActions.deleteAuthor(id);
-		RecommenderActions.fetchWikis();
+		RecommenderActions.fetchWikis(this.state.textVal);
 		toastr.success('Wiki list received');
 	},
-
+	handleTextChange: function(event) {
+		this.setState({textVal: event.target.value});
+	},
 	getInitialState: function() {
 		return {
-			wikis: WikiStore.getAllWikis()
+			wikis: WikiStore.getAllWikis(),
+			loadIndicator: WikiStore.getLoadIndicator(),
+			textVal: ''
 		};
 	},
 
@@ -36,18 +39,29 @@ var Home = React.createClass({
 	_onChange: function() {
 		// debugger;
 		this.setState({ wikis: WikiStore.getAllWikis() });
+		this.setState({ loadIndicator: WikiStore.getLoadIndicator() });
 	},
 
+	loadIndicator: function() {
+		if (this.state.loadIndicator) {
+			return (<span>Loading...</span>);
+		}
+		else
+		{
+			return null;
+		}
+	},
 	render: function() {
 		return (
 			<div className="">
 				<h1>Wiki recommendation</h1>
 				<div className="row">
 					<div className="col-lg-12">
-						<textArea />
+						<div><textArea value={this.state.textVal} onChange={this.handleTextChange} /></div>
 						<div className="row">
 							<div className="col-lg-12">
 								<button className="btn btn-primary" onClick={this.recommendWikis}>Submit</button>
+							{this.loadIndicator()}
 							</div>
 						</div>
 					</div>

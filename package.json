@@ -11,6 +11,7 @@
   "private": true,
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.7.0",
     "bootstrap": "^3.3.5",
     "browserify": "^10.2.4",
     "chai": "^3.4.1",

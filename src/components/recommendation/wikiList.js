@@ -5,7 +5,7 @@ var React = require('react');
 
 var WikiList = React.createClass({
 	propTypes: {
-		wikis: React.PropTypes.array.isRequired
+		wikis: React.PropTypes.array
 	},
 
 
