@@ -12,20 +12,20 @@ var RecommenderApi = {
 	getWikis: function(text, callback) {
 		var ret;
 		console.log('hi', text);
-		// var config = {
-		// method: 'post',
-		// url: 'http://localhost:8082',
-		// data: { 'title': 'NA', 'text': text}
-		// };
-		// axios(config)
-		// .then(function (response) {
-		// 	console.log(response);
-		// 	callback(response);
-		// })
-		// .catch(function (response){
-		// 	console.log(response);
-		// 	callback(response);
-		// }); 
+		var config = {
+		method: 'post',
+		url: 'http://localhost:8082',
+		data: { 'title': 'NA', 'text': text}
+		};
+		axios(config)
+		.then(function (response) {
+			console.log(response);
+			callback(response);
+		})
+		.catch(function (response){
+			console.log(response);
+			callback(response);
+		}); 
 		return ret;
 	}
 };
